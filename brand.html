@@ -1,0 +1,44 @@
+
+  <div class="col-md-12 topSpace">
+
+    <label class="col-md-3">Select Brand:</label>
+     <select class="forms col-md-8" (change)="updateBranditem($event.target.value)" >
+       </div>
+    
+    <option value=" ">Select</option>
+                <option *ng-for="#o of brandItems" [value]="o">{{o}}</option>
+            </select>
+           
+    <div class="row" [hidden]="selectedBrand">
+  <div class="col-md-12 topSpace">
+
+    <label class="col-md-3">Select Model:</label>
+     <select class="forms col-md-8" (change)="onSelectModel($event.target.value)" >
+       </div>
+    
+    <option value=" ">Select</option>
+<option *ng-for="#o of selectedModels" [value]="o.model">{{o.model}}</option>
+            </select>
+  </div>
+  
+    <div [hidden]="selectedModel"> 
+  <div class="col-md-12 topSpace">
+    <div class="col-md-3">
+      <p style="float:left;margin-right:65px"><b>Name:</b> </p>
+    </div>
+    <div class="col-md-8">
+      <p>
+        {{name}}
+      </p>
+    </div>
+  </div>
+  
+
+  <div class="col-md-6 col-md-offset-3" >
+    
+    <img class="border topSpace" src="{{image}}"> 
+
+  </div>
+        
+            </div>
+            
